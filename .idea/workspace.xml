@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd0da02c-4021-405f-b9e3-eb9dc7934708" name="Default Changelist" comment="" />
+    <list default="true" id="cd0da02c-4021-405f-b9e3-eb9dc7934708" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/data/testidata.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/httpservice.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DELETE_service/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/DELETE_service/delete.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GET_service/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/GET_service/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/data/testdata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/frontend.html" beforeDir="false" afterPath="$PROJECT_DIR$/Main/frontend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Main/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POST_service/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/POST_service/post.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,13 +22,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Go File" />
         <option value="package.json" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
   <component name="GOROOT" path="C:\Users\roope\sdk\go1.13.7" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZChLLH6WehUELkPHkAg8e4ebZh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,6 +44,7 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -75,6 +93,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Build_Tags_&amp;_Vendoring" timestamp="1584449830406">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Build_Tags_&amp;_Vendoring/0.0.1920.1040/1920.0.1920.1040/-1920.-100.1920.1040@0.0.1920.1040" timestamp="1584449830406" />
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584351893918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
