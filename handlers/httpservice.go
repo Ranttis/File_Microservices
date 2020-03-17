@@ -25,17 +25,19 @@ func NewFiles(l *log.Logger) *Files {
 func (f *Files) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	// handle the request for a list of products
 	if r.Method == http.MethodGet {
+		println("testGET")
 		f.getFiles(rw, r)
 		return
 	}
 
 	if r.Method == http.MethodPost {
-		f.addProduct(rw, r)
+		println("testPOST")
+		f.addFile(rw, r)
 		return
 	}
 
-	if r.Method == http.MethodPut {
-		f.l.Println("PUT", r.URL.Path)
+	if r.Method == http.MethodDelete {
+		f.l.Println("DELETE", r.URL.Path)
 		// expect the id in the URI
 		reg := regexp.MustCompile(`/([0-9]+)`)
 		g := reg.FindAllStringSubmatch(r.URL.Path, -1)
@@ -55,13 +57,14 @@ func (f *Files) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 		idString := g[0][1]
 		id, err := strconv.Atoi(idString)
 		if err != nil {
-			f.l.Println("Invalid URI unable to convert to numer", idString)
+			f.l.Println("Invalid URI unable to convert to number", idString)
 			http.Error(rw, "Invalid URI", http.StatusBadRequest)
 			return
 		}
-
+		println("testDELETE")
 		f.deleteFile(id, rw, r)
 		return
+
 	}
 
 	// catch all
@@ -70,8 +73,8 @@ func (f *Files) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 }
 
 // getProducts returns the products from the data store
-func (p *Files) getFiles(rw http.ResponseWriter, r *http.Request) {
-	p.l.Println("Handle GET Products")
+func (f *Files) getFiles(rw http.ResponseWriter, r *http.Request) {
+	f.l.Println("Handle GET Products")
 
 	// fetch the products from the datastore
 	lp := data.GetFiles()
@@ -83,7 +86,7 @@ func (p *Files) getFiles(rw http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (f *Files) addProduct(rw http.ResponseWriter, r *http.Request) {
+func (f *Files) addFile(rw http.ResponseWriter, r *http.Request) {
 	f.l.Println("Handle POST Product")
 
 	file := &data.File{}

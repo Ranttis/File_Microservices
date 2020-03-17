@@ -7,9 +7,9 @@ import (
 )
 
 type File struct {
-	ID 		int
-	Name 	string
-	Type 	string
+	ID 		int 	`json:"id"`
+	Name 	string 	`json:"name"`
+	Type 	string  `json:"type"`
 }
 
 func (f *File) FromJSON(r io.Reader) error{
@@ -40,8 +40,13 @@ func DeleteFile(id int, f *File) error{
 	}
 	f.ID = id
 	fileList[pos] = f
+	fileList = RemoveIndex(fileList,id)
 
 	return nil
+}
+
+func RemoveIndex(f []*File, index int) []*File{
+	return append(f[:index],f[index+1:]...)
 }
 
 func getNextID() int{

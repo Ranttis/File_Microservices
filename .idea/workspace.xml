@@ -2,21 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd0da02c-4021-405f-b9e3-eb9dc7934708" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/data/testidata.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/httpservice.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DELETE_service/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/DELETE_service/delete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GET_service/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/GET_service/get.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/data/testdata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/frontend.html" beforeDir="false" afterPath="$PROJECT_DIR$/Main/frontend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/data/testidata.go" beforeDir="false" afterPath="$PROJECT_DIR$/Main/data/testidata.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/frontend.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Main/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POST_service/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/POST_service/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/httpservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/httpservice.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

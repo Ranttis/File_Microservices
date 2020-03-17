@@ -1,6 +1,7 @@
 package main
 
 import (
+	"File_Microservices/handlers"
 	"context"
 	"log"
 	"net/http"
@@ -12,7 +13,10 @@ import (
 
 func main(){
 	l := log.New(os.Stdout, "File_Microservice", log.LstdFlags)
+
+	ph := handlers.NewFiles(l)
 	sm := http.NewServeMux()
+	sm.Handle("/", ph)
 
 	s := http.Server{
 		Addr:              ":8080",
