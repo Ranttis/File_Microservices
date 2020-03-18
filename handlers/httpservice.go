@@ -1,6 +1,5 @@
 package handlers
 
-
 import (
 	"log"
 	"net/http"
@@ -25,13 +24,11 @@ func NewFiles(l *log.Logger) *Files {
 func (f *Files) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	// handle the request for a list of products
 	if r.Method == http.MethodGet {
-		println("testGET")
 		f.getFiles(rw, r)
 		return
 	}
 
 	if r.Method == http.MethodPost {
-		println("testPOST")
 		f.addFile(rw, r)
 		return
 	}
@@ -61,7 +58,6 @@ func (f *Files) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 			http.Error(rw, "Invalid URI", http.StatusBadRequest)
 			return
 		}
-		println("testDELETE")
 		f.deleteFile(id, rw, r)
 		return
 
@@ -78,6 +74,7 @@ func (f *Files) getFiles(rw http.ResponseWriter, r *http.Request) {
 
 	// fetch the products from the datastore
 	lp := data.GetFiles()
+
 
 	// serialize the list to JSON
 	err := lp.ToJSON(rw)
@@ -100,23 +97,9 @@ func (f *Files) addFile(rw http.ResponseWriter, r *http.Request) {
 }
 
 func (f Files) deleteFile(id int, rw http.ResponseWriter, r*http.Request) {
-	f.l.Println("Handle PUT Product")
+	f.l.Println("Handle DELETE Product")
 
 	file := &data.File{}
+	data.DeleteFile(id, file)
 
-	err := file.FromJSON(r.Body)
-	if err != nil {
-		http.Error(rw, "Unable to unmarshal json", http.StatusBadRequest)
-	}
-
-	err = data.DeleteFile(id, file)
-	if err == data.ErrProductNotFound {
-		http.Error(rw, "Product not found", http.StatusNotFound)
-		return
-	}
-
-	if err != nil {
-		http.Error(rw, "Product not found", http.StatusInternalServerError)
-		return
-	}
 }

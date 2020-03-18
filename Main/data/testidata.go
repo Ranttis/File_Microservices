@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"os"
+	"strconv"
 )
 
 type File struct {
@@ -11,6 +13,10 @@ type File struct {
 	Name 	string 	`json:"name"`
 	Type 	string  `json:"type"`
 }
+
+var n int
+var createFilePath = "/"
+var deleteFilePath = "./"
 
 func (f *File) FromJSON(r io.Reader) error{
 	e := json.NewDecoder(r)
@@ -25,20 +31,48 @@ func (f *Files) ToJSON(w io.Writer) error{
 }
 
 func GetFiles() Files{
+	if len(fileList) != 0{
+		for _,  f := range fileList{
+			n = n + 1
+			contentString := "ID: " + strconv.Itoa(f.ID) + "\n" + "name: "+ f.Name+ "\n"+ "type: " + f.Type
+			content := []byte(contentString)
+			testFile, err := os.Create(f.Name+f.Type)
+			_, _ = testFile.Write(content)
+			if err !=nil{
+				println(err)
+			}
+		}
+	}
 	return fileList
 }
 
 func AddFile(f *File)  {
 	f.ID = getNextID()
 	fileList = append(fileList, f)
+
+	contentString := "ID: " + strconv.Itoa(f.ID) + "\n" + "name: "+ f.Name+ "\n"+ "type: " + f.Type
+	content := []byte(contentString)
+	testFile, err := os.Create(f.Name+f.Type)
+	if err != nil{
+		println(err)
+	}
+	_, _ = testFile.Write(content)
 }
 
 func DeleteFile(id int, f *File) error{
-	_, pos, err := findFile(id)
+	ff, pos, err := findFile(id)
 	if err != nil {
 		return err
 	}
-	f.ID = id
+	var pathToDelete = deleteFilePath+ff.Name+ff.Type
+	println(pathToDelete)
+	//os.Remove("C:/Users/roope/go/src/File_Microservices/Main/data/"+ff.Name+ff.Type)
+	//println("C:/Users/roope/go/src/File_Microservices/Main/data/"+ff.Name+ff.Type)
+	var er = os.Remove(pathToDelete)
+	if er != nil{
+		return err
+	}
+
 	fileList[pos] = f
 	fileList = RemoveIndex(fileList,id)
 
@@ -46,7 +80,8 @@ func DeleteFile(id int, f *File) error{
 }
 
 func RemoveIndex(f []*File, index int) []*File{
-	return append(f[:index],f[index+1:]...)
+	f = append(f[index:], f[index+1:]...)
+	return f
 }
 
 func getNextID() int{

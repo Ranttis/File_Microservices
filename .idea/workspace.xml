@@ -4,8 +4,6 @@
     <list default="true" id="cd0da02c-4021-405f-b9e3-eb9dc7934708" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/data/testidata.go" beforeDir="false" afterPath="$PROJECT_DIR$/Main/data/testidata.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/frontend.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Main/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/httpservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/httpservice.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -101,6 +100,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Build_Tags_&amp;_Vendoring" timestamp="1584449830406">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -142,5 +144,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040/-1920.-100.1920.1040@0.0.1920.1040" timestamp="1584350837774" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1584527332850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040/-1920.-100.1920.1040@0.0.1920.1040" timestamp="1584527332850" />
   </component>
 </project>
