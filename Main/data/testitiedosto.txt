@@ -1,0 +1,4 @@
+ID: 1
+name: testitiedosto
+type: .txt
+content: Lorem ipsum dolor sit amet.

@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd0da02c-4021-405f-b9e3-eb9dc7934708" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/roope.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/data/jsontiedosto1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/data/testitiedosto.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/data/testitiedosto2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/data/testidata.go" beforeDir="false" afterPath="$PROJECT_DIR$/Main/data/testidata.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Main/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/httpservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/httpservice.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
