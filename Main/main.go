@@ -34,7 +34,7 @@ func main() {
 		l.Println("Käynnistetään palvelin porttiin :8080")
 		err := http.ListenAndServe(":8080", sm) // http.ListenAndServe käynnistää palvelimen annettuun osoitteeseen ja käyttää annettua handleria pyyntöjen käsittelyyn
 		if err != nil {                         // Tarkastetaan palvelimen käynnistys virheen varalta
-			l.Printf("Virhe käynnistäessä palvelinta", err) // Jos virhe löytyy, ilmoitetaan käyttäjälle ja
+			l.Printf("Virhe käynnistäessä palvelinta:  %s", err.Error()) // Jos virhe löytyy, ilmoitetaan käyttäjälle ja
 			os.Exit(1)                                      // Sammutetaan sovellus
 		}
 	}()
