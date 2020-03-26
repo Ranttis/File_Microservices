@@ -115,13 +115,13 @@ func DeleteFile(id int, f *File) error {
 	return nil
 }
 
-// RemoveIndex poistaa slicen elementin annetussa indexissä			TODO: INDEXI KUNTOON
+// RemoveIndex poistaa slicen elementin annetussa indexissä
 func RemoveIndex(f []*File, index int) []*File {
-	if index >= len(f)-1 {
-		f = f[:index+copy(f[index-1:], f[index:])]
+	if index >= len(f)-1 { // Jos indeksi osoittaa slicen viimeiseen elementtiin
+		f = f[:index+copy(f[index-1:], f[index:])] // Varmistetaan, ettei slice mene yli rajojen ja poistetaan elementti
 	} else {
-		f = f[:index+copy(f[index:], f[index+1:])]
-		f = append(f[:index], f[index+1:]...)
+		f = f[:index+copy(f[index:], f[index+1:])] // Jos ei ole slicen viimeinen elementti
+		f = append(f[:index], f[index+1:]...)      // Poistetaan elementti
 	}
 	return f
 }
@@ -147,23 +147,23 @@ var ErrFileNotFound = fmt.Errorf("File not found") // Custom virheen implementaa
 // Testidatana toimii lista kovakoodatuista Fileistä.
 var fileList = []*File{
 	&File{
-		ID:   1,
-		Name: "testitiedosto",
-		Type: ".txt",
+		ID:      1,
+		Name:    "testitiedosto",
+		Type:    ".txt",
 		Content: "Lorem ipsum dolor sit amet.",
 	},
 
 	&File{
-		ID:   2,
-		Name: "testitiedosto2",
-		Type: ".txt",
+		ID:      2,
+		Name:    "testitiedosto2",
+		Type:    ".txt",
 		Content: "Lorem ipsum dolor sit amet.",
 	},
 
 	&File{
-		ID:   3,
-		Name: "jsontiedosto1",
-		Type: ".json",
-		Content:"Lorem ipsum dolor sit amet.",
+		ID:      3,
+		Name:    "jsontiedosto1",
+		Type:    ".json",
+		Content: "Lorem ipsum dolor sit amet.",
 	},
 }
