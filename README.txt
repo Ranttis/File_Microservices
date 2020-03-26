@@ -9,7 +9,7 @@ Testidata.go:ssa on data storage (tässä tapauksessa slice), joka sisältää t
 Testidata on tyyppiä File, jolla on neljä kenttää ID, Nimi, Tyyppi ja Sisältö
 Testitiedostot luodaan myös lokaalisti.
 
-Tähän dataan päästään käsiksi HTTP kutsuilla POST, PUT, DELETE ja GET.
+Tähän dataan päästään käsiksi HTTP kutsuilla POST, DELETE ja GET.
     POST kutsulla voidaan luoda uusia Filejä
     DELETE kutsulla voidaan poistaa olemassa olevia Filejä
     GET kutsulla voidaan hakea kaikki olemassa olevat Filet

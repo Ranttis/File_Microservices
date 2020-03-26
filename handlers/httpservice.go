@@ -23,7 +23,7 @@ func NewFiles(l *log.Logger) *Files {
 // ServeHTTP käsittelee saapuvat HTTP kutsut (POST,DELETE,GET)
 // f on ServeHTTP vastaanottaja (receiver), eli ServeHTTP:n sisällä päästään käsiksi f:ään.
 // Argumenttina ottaa http.ResponseWriterin, joka rakentaa HTTP vastauksen (response)
-// ja http.Request pointerin, joka on serverin vastaanottama tai clientin lähettämä pyyntö.
+// ja http.Request pointerin, joka on serverin vastaanottama pyyntö.
 // ServeHTTP ei palauta mitään
 func (f *Files) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet { // Tarkastetaan onko saapuva pyyntö GET
@@ -37,7 +37,7 @@ func (f *Files) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.Method == http.MethodDelete { // Tarkastetaan onko saapuva pyyntö DELETE
-		f.lgr.Println("DELETE", r.URL.Path)
+		f.lgr.Println("DELETE", r.URL.Path)				// Lokitetaan
 		reg := regexp.MustCompile(`/([0-9]+)`)         // Luodaan Regural expression, jonka avulla  tarkistetaan, että URLissa on vain yksi ID
 		g := reg.FindAllStringSubmatch(r.URL.Path, -1) // Etsitään URLista regexin avulla ID
 
